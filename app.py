@@ -11,8 +11,8 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://www.dropbox.com/s/j8bvf35768lhpfk/export.pkl?dl=1'
-export_file_name = 'export.pkl'
+!export_file_url = 'https://www.dropbox.com/s/j8bvf35768lhpfk/export.pkl?dl=1'
+!export_file_name = 'export.pkl'
 
 classes = ['eczema', 'measles', 'melanoma']
 path = Path(__file__).parent
@@ -53,7 +53,7 @@ loop.close()
 
 @app.route('/')
 async def homepage(request):
-    html_file = path / 'view' / 'index.html'
+    html_file = path / 'templates' / 'index.html'
     return HTMLResponse(html_file.open().read())
 
 
